@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "131311671077",
+    "firebase_url": "https://seproject-17224.firebaseio.com",
+    "project_id": "seproject-17224",
+    "storage_bucket": "seproject-17224.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131311671077:android:9921623031e27a42bdeccc",
+        "android_client_info": {
+          "package_name": "com.sepro.occuchart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131311671077-4dt0nc03tem80embtkv10nm4aja9a6gm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXsuep0YYWRkaR2gp7VtTuoN_YFhlwYAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131311671077-4dt0nc03tem80embtkv10nm4aja9a6gm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
