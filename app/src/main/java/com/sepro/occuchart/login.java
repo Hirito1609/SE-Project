@@ -3,6 +3,8 @@ package com.sepro.occuchart;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -39,15 +41,40 @@ public class login extends AppCompatActivity {
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AuthUI.getInstance()
-                        .delete(login.this)
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
-                                signOut();
-                            }
-                        });
 
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(login.this);
+                // Setting Dialog Title
+                alertDialog.setTitle("Confirm Delete...");
+                // Setting Dialog Message
+                alertDialog.setMessage("Are you sure you want delete ?");
+                // Setting Icon to Dialog
+                alertDialog.setIcon(R.drawable.danger_icon);
+                // Setting Positive "Yes" Button
+                alertDialog.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        AuthUI.getInstance()
+                                .delete(login.this)
+                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        signOut();
+                                        Toast.makeText(getApplicationContext(),"Your Account has been deleted successfully!!",Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                    }
+                });
+
+                // Setting Negative "NO" Button
+                alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Write your code here to invoke NO event
+                        Toast.makeText(getApplicationContext(), "You clicked on NO ", Toast.LENGTH_SHORT).show();
+                        dialog.cancel();
+                    }
+                });
+                // Showing Alert Message
+                alertDialog.show();
             }
         });
     }
