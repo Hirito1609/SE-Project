@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Occupancy chart</string>
 
-    <string name="facebook_application_id">Your_id_here</string>
+    <string name="facebook_application_id">1274853152698124</string>
     <string name="fb_login_protocol_scheme">Your_value_here</string>
 
     <string name="twitter_consumer_key">Your_key_here </string>
