@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
                 new AuthUI.IdpConfig.TwitterBuilder().build()
         );
         showSignInOptions();
+//        if (getIntent().getBooleanExtra("EXIT", false))
+//        {
+//            finish();
+//        }
     }
 
     private void showSignInOptions() {
@@ -61,8 +65,21 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 Toast.makeText(this, "Welcome! " + user.getDisplayName(), Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "" + response.getError().getMessage(), Toast.LENGTH_LONG).show();
+                if(response != null)
+                {
+                    Toast.makeText(this, "" + response.getError().getMessage(), Toast.LENGTH_LONG).show();
+                }
+                finish();
+
             }
         }
     }
+
+    @Override
+    public void onBackPressed()
+    {
+        moveTaskToBack(true);
+        finish();
+    }
+
 }
