@@ -7,4 +7,7 @@
     <color name="colorPrimaryDark2">#0288D1</color>
     <color name="colorAccent2">#CDDC39</color>
     <color name="bgcolor">#121212</color>
+    <color name="colorPrimary3">#1b2a49</color>
+    <color name="colorPrimaryDark3">#465881</color>
+    <color name="colorAccent3">#00909e</color>
 </resources>

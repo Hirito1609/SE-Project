@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(
                 AuthUI.getInstance().createSignInIntentBuilder()
                         .setAvailableProviders(providers)
-                        .setTheme(R.style.MyTheme)
+                        .setTheme(R.style.AppTheme)
                         .setLogo(R.drawable.my_great_logo)
                         .setTosAndPrivacyPolicyUrls(
                                 "https://ocdamrita.com/terms.html",
