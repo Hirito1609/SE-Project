@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,10 +24,13 @@ public class login extends AppCompatActivity {
 
     Button btn_sign_out,delete,home;
     TextView display_name,display_email,display_phone;
+    RelativeLayout mainpage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        mainpage = findViewById(R.id.rl1);
+        mainpage.setVisibility(View.VISIBLE);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         display_name = findViewById(R.id.disname);
         display_email = findViewById(R.id.disemail);
