@@ -24,13 +24,13 @@ public class login extends AppCompatActivity {
 
     Button btn_sign_out,delete,home;
     TextView display_name,display_email,display_phone;
-    RelativeLayout mainpage;
+//    RelativeLayout mainpage; //xx3
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//        mainpage = findViewById(R.id.rl1);
-        mainpage.setVisibility(View.VISIBLE);
+//        mainpage = findViewById(R.id.rl1); //xx3
+//        mainpage.setVisibility(View.VISIBLE); //xx3 removed to avoid crash while clicked on profile pic
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         display_name = findViewById(R.id.disname);
         display_email = findViewById(R.id.disemail);

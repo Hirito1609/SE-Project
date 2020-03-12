@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
+//        setContentView(R.layout.activity_login); // this if implemented causes Login.java page flash while app opens
+        setContentView(R.layout.activity_main); // vr - implementing this instead of the above line
         providers = Arrays.asList(
                 new AuthUI.IdpConfig.EmailBuilder().build(),
                 new AuthUI.IdpConfig.PhoneBuilder()
