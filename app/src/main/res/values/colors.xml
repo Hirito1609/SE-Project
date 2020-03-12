@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#BB86F6</color>
-    <color name="colorPrimaryDark">#3700B3</color>
+<!--    <color name="colorPrimaryDark">#3700B3</color>-->
+    <color name="colorPrimaryDark">#202F65</color>
     <color name="colorAccent">#03DAC6</color>
     <color name="colorPrimary2">#03A9F4</color>
     <color name="colorPrimaryDark2">#0288D1</color>
@@ -10,4 +11,5 @@
     <color name="colorPrimary3">#1b2a49</color>
     <color name="colorPrimaryDark3">#465881</color>
     <color name="colorAccent3">#00909e</color>
+<!--    <color name="colorPrimaryDark_Dash">#202F65</color>-->
 </resources>
