@@ -107,4 +107,10 @@ public class login extends AppCompatActivity {
         finish();
 
     }
+
+    public void go_home(View view) {
+        startActivity(new Intent(this, dashboard.class));
+        finish();
+
+    }
 }

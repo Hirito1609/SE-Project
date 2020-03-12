@@ -60,10 +60,6 @@ public class MainActivity extends AppCompatActivity {
             IdpResponse response = IdpResponse.fromResultIntent(data);
             if (resultCode == RESULT_OK) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-//                startActivity(new Intent(this, login.class));
-//                finish();
-
                 startActivity(new Intent(this, dashboard.class));
                 finish();
 
