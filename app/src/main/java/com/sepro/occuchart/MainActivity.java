@@ -60,8 +60,13 @@ public class MainActivity extends AppCompatActivity {
             IdpResponse response = IdpResponse.fromResultIntent(data);
             if (resultCode == RESULT_OK) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                startActivity(new Intent(this, login.class));
+
+//                startActivity(new Intent(this, login.class));
+//                finish();
+
+                startActivity(new Intent(this, dashboard.class));
                 finish();
+
                 Toast.makeText(this, "Welcome! " + user.getDisplayName(), Toast.LENGTH_LONG).show();
             } else {
                 if(response != null)

@@ -44,7 +44,7 @@
                     android:layout_alignParentRight="true"
                     android:src="@drawable/person"
                     android:layout_width="82dp"
-                    android:layout_height="82dp"
+                    android:layout_height="82dp"/>
 
             </RelativeLayout>
 
