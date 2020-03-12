@@ -2,74 +2,122 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bgapps"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginTop="10dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
     android:layout_marginBottom="10dp"
     tools:context=".login"
     android:visibility="invisible"
-    android:id="@+id/rl1">
+    android:id="@+id/rl1"
+    >
+<!--    android:layout_marginTop="10dp"-->
+<!--    android:layout_marginLeft="10dp"-->
+<!--    android:layout_marginRight="10dp"-->
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Profile"
-            android:layout_marginTop="20dp"
-            />
+            android:id="@+id/dashoardtxt"
+            android:layout_marginTop="15dp"
+            android:text="Welcome,"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/disname"
-            android:text="Name : "
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email : "
-            android:id="@+id/disemail"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Phone Number : "
-            android:id="@+id/disphone"
-            />
+            android:layout_below="@id/dashoardtxt"
+            android:layout_marginTop="5dp"
+            android:text="User Name"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <ImageView
+            android:onClick="profile"
+            android:id="@+id/profile_pic"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/person"
+            android:layout_width="82dp"
+            android:layout_height="82dp"/>
+
+    </RelativeLayout>
 
     </LinearLayout>
-    <Button
-        android:onClick="go_home"
-        android:id="@+id/btn_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:layout_centerInParent="true"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_centerVertical="true"
-        android:gravity="center"
-        android:layout_below="@id/btn_home">
-        <Button
-            android:id="@+id/sign_out_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sign out"/>
 
-        <Button
-            android:id="@+id/del"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:text="Delete"/>
-    </LinearLayout>
 
 </RelativeLayout>
+
+
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:orientation="vertical">-->
+<!--<TextView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="Profile"-->
+<!--    android:layout_marginTop="20dp"-->
+<!--    />-->
+<!--<TextView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:id="@+id/disname"-->
+<!--    android:text="Name : "-->
+<!--    />-->
+<!--<TextView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="Email : "-->
+<!--    android:id="@+id/disemail"-->
+<!--    />-->
+<!--<TextView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="Phone Number : "-->
+<!--    android:id="@+id/disphone"-->
+<!--    />-->
+
+<!--</LinearLayout>-->
+<!--<Button-->
+<!--android:onClick="go_home"-->
+<!--android:id="@+id/btn_home"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="Home"-->
+<!--android:layout_centerInParent="true"/>-->
+
+<!--<LinearLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:orientation="horizontal"-->
+<!--android:layout_centerVertical="true"-->
+<!--android:gravity="center"-->
+<!--android:layout_below="@id/btn_home">-->
+<!--<Button-->
+<!--    android:id="@+id/sign_out_button"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="Sign out"/>-->
+
+<!--<Button-->
+<!--    android:id="@+id/del"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginLeft="50dp"-->
+<!--    android:text="Delete"/>-->
+<!--</LinearLayout>-->
