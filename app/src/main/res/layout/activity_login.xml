@@ -18,7 +18,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_marginTop="20dp"
@@ -47,7 +47,6 @@
             android:layout_height="wrap_content"></TextView>
 
         <ImageView
-            android:onClick="profile"
             android:id="@+id/profile_pic"
             android:layout_alignParentRight="true"
             android:src="@drawable/person"
@@ -56,68 +55,62 @@
 
     </RelativeLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/disname"
+            android:text="Name : "
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email : "
+            android:id="@+id/disemail"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number : "
+            android:id="@+id/disphone"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:onClick="go_home"
+        android:id="@+id/btn_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_below="@id/btn_home">
+        <Button
+            android:id="@+id/sign_out_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign out"/>
+
+        <Button
+            android:id="@+id/del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Delete"/>
     </LinearLayout>
 
 
 
 </RelativeLayout>
-
-
-<!--<LinearLayout-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:orientation="vertical">-->
-<!--<TextView-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:text="Profile"-->
-<!--    android:layout_marginTop="20dp"-->
-<!--    />-->
-<!--<TextView-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:id="@+id/disname"-->
-<!--    android:text="Name : "-->
-<!--    />-->
-<!--<TextView-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:text="Email : "-->
-<!--    android:id="@+id/disemail"-->
-<!--    />-->
-<!--<TextView-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:text="Phone Number : "-->
-<!--    android:id="@+id/disphone"-->
-<!--    />-->
-
-<!--</LinearLayout>-->
-<!--<Button-->
-<!--android:onClick="go_home"-->
-<!--android:id="@+id/btn_home"-->
-<!--android:layout_width="wrap_content"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:text="Home"-->
-<!--android:layout_centerInParent="true"/>-->
-
-<!--<LinearLayout-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="wrap_content"-->
-<!--android:orientation="horizontal"-->
-<!--android:layout_centerVertical="true"-->
-<!--android:gravity="center"-->
-<!--android:layout_below="@id/btn_home">-->
-<!--<Button-->
-<!--    android:id="@+id/sign_out_button"-->
-<!--    android:layout_width="wrap_content"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:text="Sign out"/>-->
-
-<!--<Button-->
-<!--    android:id="@+id/del"-->
-<!--    android:layout_width="wrap_content"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    android:layout_marginLeft="50dp"-->
-<!--    android:text="Delete"/>-->
-<!--</LinearLayout>-->
