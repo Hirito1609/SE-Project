@@ -23,25 +23,28 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
+//        setContentView(R.layout.activity_login); // this if implemented causes Login.java page flash while app opens
+        setContentView(R.layout.activity_main); // vr - implementing this instead of the above line
         providers = Arrays.asList(
                 new AuthUI.IdpConfig.EmailBuilder().build(),
                 new AuthUI.IdpConfig.PhoneBuilder()
                         //.setDefaultCountryIso("in")
                         .build(),
                 new AuthUI.IdpConfig.FacebookBuilder().build(),
-                new AuthUI.IdpConfig.GoogleBuilder().build(),
-                new AuthUI.IdpConfig.TwitterBuilder().build()
+                new AuthUI.IdpConfig.GoogleBuilder().build()
         );
         showSignInOptions();
+//        if (getIntent().getBooleanExtra("EXIT", false))
+//        {
+//            finish();
+//        }
     }
 
     private void showSignInOptions() {
         startActivityForResult(
                 AuthUI.getInstance().createSignInIntentBuilder()
                         .setAvailableProviders(providers)
-                        .setTheme(R.style.MyTheme)
+                        .setTheme(R.style.AppTheme)
                         .setLogo(R.drawable.my_great_logo)
                         .setTosAndPrivacyPolicyUrls(
                                 "https://ocdamrita.com/terms.html",
@@ -57,12 +60,26 @@ public class MainActivity extends AppCompatActivity {
             IdpResponse response = IdpResponse.fromResultIntent(data);
             if (resultCode == RESULT_OK) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                startActivity(new Intent(this, login.class));
+                startActivity(new Intent(this, dashboard.class));
                 finish();
+
                 Toast.makeText(this, "Welcome! " + user.getDisplayName(), Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "" + response.getError().getMessage(), Toast.LENGTH_LONG).show();
+                if(response != null)
+                {
+                    Toast.makeText(this, "" + response.getError().getMessage(), Toast.LENGTH_LONG).show();
+                }
+                finish();
+
             }
         }
     }
+
+    @Override
+    public void onBackPressed()
+    {
+        moveTaskToBack(true);
+        finish();
+    }
+
 }
