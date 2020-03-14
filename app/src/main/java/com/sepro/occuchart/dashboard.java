@@ -1,6 +1,7 @@
 package com.sepro.occuchart;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class dashboard extends AppCompatActivity {
 
     TextView display_name;
+    CardView uploadtt, viewtt,viewroomstatus, bookroom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,39 @@ public class dashboard extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         display_name = findViewById(R.id.dash_user);
         display_name.append(user.getDisplayName());
+        uploadtt = findViewById(R.id.cvupload_tt);
+        viewtt = findViewById(R.id.cvview_tt);
+        viewroomstatus = findViewById(R.id.cvroom_status);
+        bookroom = findViewById(R.id.cvreserve_room);
+
+        uploadtt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(dashboard.this,uploadtable.class);
+                startActivity(i);
+            }
+        });
+        viewtt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(dashboard.this,viewtable.class);
+                startActivity(i);
+            }
+        });
+        viewroomstatus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(dashboard.this,roomstatus.class);
+                startActivity(i);
+            }
+        });
+        bookroom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(dashboard.this,bookroom.class);
+                startActivity(i);
+            }
+        });
 
 
     }

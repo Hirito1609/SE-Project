@@ -71,6 +71,7 @@
                     app:cardElevation="10dp"
                     app:cardCornerRadius="10dp"
                     android:layout_margin="12dp"
+                    android:id="@+id/cvupload_tt"
                     >
                     
                     <LinearLayout
@@ -91,7 +92,7 @@
                             android:layout_gravity="center"
                             android:textColor="#000000"
                             android:textSize="18dp"
-                            android:text="Upload"
+                            android:text="Upload Timetable"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 
@@ -107,6 +108,7 @@
                     app:cardElevation="10dp"
                     app:cardCornerRadius="10dp"
                     android:layout_margin="12dp"
+                    android:id="@+id/cvview_tt"
                     >
 
                     <LinearLayout
@@ -127,7 +129,7 @@
                             android:layout_gravity="center"
                             android:textColor="#000000"
                             android:textSize="18dp"
-                            android:text="Veiw"
+                            android:text="Veiw Timetable"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 
@@ -143,6 +145,7 @@
                     app:cardElevation="10dp"
                     app:cardCornerRadius="10dp"
                     android:layout_margin="12dp"
+                    android:id="@+id/cvreserve_room"
                     >
 
                     <LinearLayout
@@ -163,7 +166,7 @@
                             android:layout_gravity="center"
                             android:textColor="#000000"
                             android:textSize="18dp"
-                            android:text="Book room"
+                            android:text="Reserve room"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 
@@ -179,6 +182,7 @@
                     app:cardElevation="10dp"
                     app:cardCornerRadius="10dp"
                     android:layout_margin="12dp"
+                    android:id="@+id/cvroom_status"
                     >
 
                     <LinearLayout
@@ -199,7 +203,7 @@
                             android:layout_gravity="center"
                             android:textColor="#000000"
                             android:textSize="18dp"
-                            android:text="Status"
+                            android:text="Room Status"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 
