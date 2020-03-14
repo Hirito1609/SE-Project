@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -19,11 +20,13 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.protobuf.NullValue;
 
 public class login extends AppCompatActivity {
 
     Button btn_sign_out,delete,home;
     TextView display_name,display_email,display_phone;
+    String TAG = "display parameters";
 //    RelativeLayout mainpage; //xx3
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +37,9 @@ public class login extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         display_name = findViewById(R.id.disname);
         display_email = findViewById(R.id.disemail);
-        display_phone = findViewById(R.id.disphone);
+//        display_phone = findViewById(R.id.disphone);
         display_name.append(user.getDisplayName());
         display_email.append(user.getEmail());
-//        display_phone.append(user.getPhoneNumber());
         btn_sign_out = findViewById(R.id.sign_out_button);
         home = findViewById(R.id.btn_home);
         delete = findViewById(R.id.del);
