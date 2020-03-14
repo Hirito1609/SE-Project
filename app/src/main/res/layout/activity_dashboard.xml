@@ -129,7 +129,7 @@
                             android:layout_gravity="center"
                             android:textColor="#000000"
                             android:textSize="18dp"
-                            android:text="Veiw Timetable"
+                            android:text="View Timetable"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 
