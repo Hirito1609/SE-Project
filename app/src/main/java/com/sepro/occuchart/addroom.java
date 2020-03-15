@@ -65,7 +65,19 @@ public class addroom extends AppCompatActivity {
                             }
                         });
                 roomnum.setText("");
+
+
+
             }
         });
+
+
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        moveTaskToBack(true);
+        finish();
     }
 }

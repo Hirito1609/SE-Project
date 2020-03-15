@@ -34,6 +34,7 @@ public class password extends AppCompatActivity {
                         Intent intent = new Intent(password.this,addroom.class);
                         startActivity(intent);
                     }
+
                 });
     }
 }
