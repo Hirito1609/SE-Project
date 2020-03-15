@@ -100,4 +100,10 @@ public class dashboard extends AppCompatActivity {
         finish();
 
     }
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(this,MainActivity.class));
+        finish();
+    }
 }

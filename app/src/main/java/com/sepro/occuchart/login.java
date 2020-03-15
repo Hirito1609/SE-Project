@@ -37,9 +37,24 @@ public class login extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         display_name = findViewById(R.id.disname);
         display_email = findViewById(R.id.disemail);
-//        display_phone = findViewById(R.id.disphone);
-        display_name.append(user.getDisplayName());
-        display_email.append(user.getEmail());
+        display_phone = findViewById(R.id.disphone);
+        String usn= user.getDisplayName();
+        String usemail = user.getEmail();
+        if (usn != null)
+        {
+            display_name.append(user.getDisplayName());
+        }
+        else
+        {
+            display_name.append(user.getPhoneNumber());
+            display_phone.setVisibility(View.VISIBLE);
+            display_phone.append(user.getPhoneNumber());
+        }
+        if(usemail != null)
+        {
+            display_email.setVisibility(View.VISIBLE);
+            display_email.append(user.getEmail());
+        }
         btn_sign_out = findViewById(R.id.sign_out_button);
         home = findViewById(R.id.btn_home);
         delete = findViewById(R.id.del);
@@ -114,5 +129,12 @@ public class login extends AppCompatActivity {
         startActivity(new Intent(this, dashboard.class));
         finish();
 
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(this, dashboard.class));
+        finish();
     }
 }

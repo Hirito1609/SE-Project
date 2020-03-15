@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -105,5 +106,12 @@ public class uploadtable extends AppCompatActivity {
                 }
         });
 
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(this, dashboard.class));
+        finish();
     }
 }
