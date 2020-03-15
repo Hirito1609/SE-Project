@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
@@ -28,6 +30,9 @@ public class allocaterooms extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                CollectionReference colrefroom = db.collection("rooms");
+                CollectionReference colrefcourse = db.collection("courses");
+                CollectionReference colrefttable = db.collection("timetable");
 
             }
         });
