@@ -40,4 +40,10 @@ public class password extends AppCompatActivity {
 
                 });
     }
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(this, dashboard.class));
+        finish();
+    }
 }
