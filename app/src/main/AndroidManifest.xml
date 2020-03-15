@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".addroom"></activity>
+        <activity android:name=".allocaterooms"></activity>
+        <activity android:name=".addroom" />
         <activity android:name=".roomprops" />
         <activity android:name=".bookroom" />
         <activity android:name=".roomstatus" />

@@ -255,6 +255,7 @@
                     app:cardElevation="10dp"
                     app:cardCornerRadius="10dp"
                     android:layout_margin="12dp"
+                    android:id="@+id/cvallocate_room"
                     >
 
                     <LinearLayout
@@ -274,7 +275,7 @@
                             android:layout_gravity="center"
                             android:textColor="#000000"
                             android:textSize="18dp"
-                            android:text="Upload"
+                            android:text="Allocate Rooms"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 
