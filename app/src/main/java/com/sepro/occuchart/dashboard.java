@@ -62,8 +62,9 @@ public class dashboard extends AppCompatActivity {
         });
         addrooms.setOnClickListener(new View.OnClickListener() {
             @Override
+            // goto for add room buuton
             public void onClick(View view) {
-                Intent i = new Intent(dashboard.this,addroom.class);
+                Intent i = new Intent(dashboard.this,password.class);
                 startActivity(i);
             }
         });
