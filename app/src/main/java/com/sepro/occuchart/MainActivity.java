@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         providers = Arrays.asList(
                 new AuthUI.IdpConfig.EmailBuilder().build(),
                 new AuthUI.IdpConfig.PhoneBuilder()
-                        //.setDefaultCountryIso("in")
+                        .setDefaultCountryIso("in")
                         .build(),
                 new AuthUI.IdpConfig.FacebookBuilder().build(),
                 new AuthUI.IdpConfig.GoogleBuilder().build()
