@@ -2,6 +2,7 @@ package com.sepro.occuchart;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -49,6 +50,8 @@ public class viewtable extends AppCompatActivity {
     Button gettable;
     @BindView(R.id.periodlist)
     LinearLayout periodlist;
+    @BindView(R.id.cardview101)
+    CardView cview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +68,7 @@ public class viewtable extends AppCompatActivity {
             public void onClick(View view) {
 
                 periodlist.setVisibility(View.VISIBLE);
+                cview.setVisibility(View.VISIBLE);
                 //Source source = Source.CACHE;
                 DocumentReference docRef = db.collection("timetable").document(selectspinner.getSelectedItem().toString());
                 docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
