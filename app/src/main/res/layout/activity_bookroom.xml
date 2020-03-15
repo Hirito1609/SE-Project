@@ -16,7 +16,7 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:text="Reserve Rooms"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="@color/colorPrimary"
         android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
