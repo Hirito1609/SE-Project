@@ -15,7 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class dashboard extends AppCompatActivity {
 
     TextView display_name;
-    CardView uploadtt, viewtt,viewroomstatus, bookroom;
+    CardView uploadtt, viewtt,viewroomstatus, bookroom, addrooms;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,7 @@ public class dashboard extends AppCompatActivity {
         viewtt = findViewById(R.id.cvview_tt);
         viewroomstatus = findViewById(R.id.cvroom_status);
         bookroom = findViewById(R.id.cvreserve_room);
+        addrooms = findViewById(R.id.cvadd_room);
 
         uploadtt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +56,13 @@ public class dashboard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(dashboard.this,bookroom.class);
+                startActivity(i);
+            }
+        });
+        addrooms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(dashboard.this,addroom.class);
                 startActivity(i);
             }
         });
