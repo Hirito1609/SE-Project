@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.hanks.passcodeview.PasscodeView;
@@ -11,6 +12,7 @@ import com.hanks.passcodeview.PasscodeView;
 public class password extends AppCompatActivity {
     // initialize variable
     PasscodeView passcodeView;
+    String TAG = "passwordview";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +27,12 @@ public class password extends AppCompatActivity {
                 .setListener(new PasscodeView.PasscodeViewListener() {
                     @Override
                     public void onFail() {
-                        Toast.makeText(getApplicationContext()
-                        ,"Password is Wrong ERROR:5678 ",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Password is Wrong ERROR:5678 ",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onSuccess(String number) {
+                        Log.d(TAG,number);
                         Intent intent = new Intent(password.this,addroom.class);
                         startActivity(intent);
                     }

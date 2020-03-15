@@ -28,7 +28,6 @@ public class allocaterooms extends AppCompatActivity {
             public void onClick(View view) {
 
 
-
             }
         });
 
