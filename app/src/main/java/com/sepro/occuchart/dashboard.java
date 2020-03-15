@@ -45,7 +45,8 @@ public class dashboard extends AppCompatActivity {
         uploadtt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(dashboard.this,uploadtable.class);
+                // goto for upload tt buuton
+                Intent i = new Intent(dashboard.this,password2.class);
                 startActivity(i);
             }
         });
