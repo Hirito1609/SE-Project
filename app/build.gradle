@@ -46,4 +46,8 @@ dependencies {
 //butterknife
     implementation 'com.jakewharton:butterknife:10.2.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    //hanks - paassword veiwer
+    implementation 'com.hanks:passcodeview:0.1.2'
+
 }
