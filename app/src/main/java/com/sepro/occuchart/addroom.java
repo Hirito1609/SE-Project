@@ -3,6 +3,7 @@ package com.sepro.occuchart;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -77,7 +78,7 @@ public class addroom extends AppCompatActivity {
     @Override
     public void onBackPressed()
     {
-        moveTaskToBack(true);
+        startActivity(new Intent(this, dashboard.class));
         finish();
     }
 }
