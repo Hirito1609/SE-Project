@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".password"></activity>
+        <activity android:name=".allocaterooms"></activity>
+        <activity android:name=".addroom" />
         <activity android:name=".roomprops" />
         <activity android:name=".bookroom" />
         <activity android:name=".roomstatus" />
