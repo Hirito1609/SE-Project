@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_001xxx"
     tools:context=".uploadtable">
 
     <LinearLayout
@@ -19,7 +20,8 @@
         android:text="Upload Timetable"
         android:textAlignment="center"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="40dp"
+        android:fontFamily="sans-serif-condensed-medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -32,9 +34,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="CSE C"
         android:textAlignment="center"
-        android:textSize="15sp" />
+        android:textSize="25dp" />
 
             <TextView
                 android:layout_width="wrap_content"
