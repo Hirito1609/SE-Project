@@ -62,8 +62,14 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 startActivity(new Intent(this, dashboard.class));
                 finish();
-
-                Toast.makeText(this, "Welcome! " + user.getDisplayName(), Toast.LENGTH_LONG).show();
+                String usrn = user.getDisplayName();
+                if(usrn!=null) {
+                    Toast.makeText(this, "Welcome! " + user.getDisplayName(), Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    Toast.makeText(this, "Welcome! " + user.getPhoneNumber(), Toast.LENGTH_LONG).show();
+                }
             } else {
                 if(response != null)
                 {
