@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ public class dashboard extends AppCompatActivity {
 
     TextView display_name;
     CardView uploadtt, viewtt,viewroomstatus, bookroom, addrooms, allocroom;
+    String TAGG = "firebaseauth";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +26,15 @@ public class dashboard extends AppCompatActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         display_name = findViewById(R.id.dash_user);
-        display_name.append(user.getDisplayName());
+        String usn= user.getDisplayName();
+        if (usn != null)
+        {
+            display_name.append(user.getDisplayName());
+        }
+        else
+        {
+            display_name.append(user.getPhoneNumber());
+        }
         uploadtt = findViewById(R.id.cvupload_tt);
         viewtt = findViewById(R.id.cvview_tt);
         viewroomstatus = findViewById(R.id.cvroom_status);
