@@ -65,9 +65,9 @@ public class viewtable extends AppCompatActivity {
             public void onClick(View view) {
 
                 periodlist.setVisibility(View.VISIBLE);
-                Source source = Source.CACHE;
+                //Source source = Source.CACHE;
                 DocumentReference docRef = db.collection("timetable").document(selectspinner.getSelectedItem().toString());
-                docRef.get(source).addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                         if (task.isSuccessful()) {
