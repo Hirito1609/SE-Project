@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void showSignInOptions() {
         startActivityForResult(
-                AuthUI.getInstance().createSignInIntentBuilder().setIsSmartLockEnabled(false)
+                AuthUI.getInstance().createSignInIntentBuilder()
+                        //.setIsSmartLockEnabled(false)
                         .setAvailableProviders(providers)
                         .setTheme(R.style.AppTheme)
                         .setLogo(R.drawable.logo_wtxt)
