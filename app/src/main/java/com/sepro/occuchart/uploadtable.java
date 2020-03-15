@@ -53,9 +53,9 @@ public class uploadtable extends AppCompatActivity {
         setContentView(R.layout.activity_uploadtable);
         ButterKnife.bind(this);
 
-        String Courses[]={"","Compiler Design Lab","Computer Networks","Principles of Machine Learning","Software Engineering",
+        String Courses[]={"Compiler Design Lab","Computer Networks","Principles of Machine Learning","Software Engineering",
                 "Compiler Design","Elective","Open Lab","Computer Networks Lab","Software Engineering lab",
-                "Principles of Machine Learning Lab","Mentoring","Open Lab Tutorial","CIR"};
+                "Principles of Machine Learning Lab","Mentoring","Open Lab Tutorial","CIR","Elective Lab"};
         String days[]={"Monday","Tuesday","Wednesday","Thursday","Friday"};
         ArrayAdapter<String> ad = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,days);
         dayspin.setAdapter(ad);
