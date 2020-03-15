@@ -46,12 +46,12 @@ public class addroom extends AppCompatActivity {
 
                 TextView txt = (TextView) view;
                 Map<String, Object> room = new HashMap<>();
-                room.put("ROOM_NUM",roomnum.getText().toString());
+                room.put("ROOM_NUM",roomnum.getText().toString().toUpperCase());
                 room.put("TYPE", roomtype.getSelectedItem().toString());
                 room.put("AVAILABLE", true);
                 room.put("ALLOTTED_TO", "");
 
-                db.collection("rooms").document(roomnum.getText().toString()).set(room)
+                db.collection("rooms").document(roomnum.getText().toString().toUpperCase()).set(room)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
