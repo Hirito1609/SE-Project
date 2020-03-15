@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 AuthUI.getInstance().createSignInIntentBuilder().setIsSmartLockEnabled(false)
                         .setAvailableProviders(providers)
                         .setTheme(R.style.AppTheme)
-                        .setLogo(R.drawable.my_great_logo)
+                        .setLogo(R.drawable.logo_wtxt)
                         .setTosAndPrivacyPolicyUrls(
                                 "https://ocdamrita.com/terms.html",
                                 "https://ocdamrita.com/privacy.html")
