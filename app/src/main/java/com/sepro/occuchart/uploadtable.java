@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -92,12 +93,14 @@ public class uploadtable extends AppCompatActivity {
                             public void onSuccess(Void aVoid) {
 
                                 Log.d(TAG, "Timetable added successfully!");
+                                Toast.makeText(getApplicationContext(),"Timetable added successfully!",Toast.LENGTH_SHORT).show();
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 Log.w(TAG, "Error adding timetable!");
+                                Toast.makeText(getApplicationContext(),"Error adding timetable",Toast.LENGTH_SHORT).show();
                             }
                         });
                 }
@@ -106,9 +109,9 @@ public class uploadtable extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed()
+    {
         startActivity(new Intent(this, dashboard.class));
         finish();
     }
-
 }
