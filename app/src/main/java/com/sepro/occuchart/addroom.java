@@ -78,6 +78,6 @@ public class addroom extends AppCompatActivity {
     public void onBackPressed()
     {
         moveTaskToBack(true);
-        finish();
+//        finish();
     }
 }
