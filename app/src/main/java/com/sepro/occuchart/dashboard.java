@@ -48,6 +48,7 @@ public class dashboard extends AppCompatActivity {
                 // goto for upload tt buuton
                 Intent i = new Intent(dashboard.this,password2.class);
                 startActivity(i);
+                finish();
             }
         });
         viewtt.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +78,7 @@ public class dashboard extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(dashboard.this,password.class);
                 startActivity(i);
+                finish();
             }
         });
         allocroom.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +105,7 @@ public class dashboard extends AppCompatActivity {
     @Override
     public void onBackPressed()
     {
-        startActivity(new Intent(this,MainActivity.class));
-        finish();
+
+        System.exit(0);
     }
 }

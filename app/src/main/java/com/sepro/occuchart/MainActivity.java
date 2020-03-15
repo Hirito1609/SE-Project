@@ -76,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
                 {
                     Toast.makeText(this, "" + response.getError().getMessage(), Toast.LENGTH_LONG).show();
                 }
-                finish();
 
             }
         }
