@@ -76,9 +76,13 @@ public class MainActivity extends AppCompatActivity {
                 {
                     Toast.makeText(this, "" + response.getError().getMessage(), Toast.LENGTH_LONG).show();
                 }
-                finish();
 
             }
         }
+    }
+    @Override
+    public void onBackPressed()
+    {
+        System.exit(0);
     }
 }

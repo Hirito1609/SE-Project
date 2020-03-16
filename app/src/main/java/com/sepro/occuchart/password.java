@@ -35,8 +35,15 @@ public class password extends AppCompatActivity {
                         Log.d(TAG,number);
                         Intent intent = new Intent(password.this,addroom.class);
                         startActivity(intent);
+                        finish();
                     }
 
                 });
+    }
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(this, dashboard.class));
+        finish();
     }
 }

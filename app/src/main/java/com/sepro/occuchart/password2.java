@@ -35,8 +35,15 @@ public class password2 extends AppCompatActivity {
                         Log.d(TAG,number);
                         Intent intent = new Intent(password2.this,uploadtable.class);
                         startActivity(intent);
+                        finish();
                     }
 
                 });
+    }
+    @Override
+    public void onBackPressed()
+    {
+        startActivity(new Intent(this, dashboard.class));
+        finish();
     }
 }
