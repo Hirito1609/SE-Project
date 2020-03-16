@@ -25,7 +25,7 @@
                     android:layout_marginLeft="10dp"
                     android:id="@+id/dashoardtxt"
                     android:layout_marginTop="25dp"
-                    android:text="Welcome,"
+                    android:text="WELCOME,"
                     android:textColor="#FFFFFF"
                     android:textSize="25dp"
                     android:layout_width="wrap_content"
