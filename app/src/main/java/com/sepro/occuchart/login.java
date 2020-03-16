@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -55,6 +56,15 @@ public class login extends AppCompatActivity {
             display_email.setVisibility(View.VISIBLE);
             display_email.append(user.getEmail());
         }
+//        getting user photo
+
+        Uri xx = FirebaseAuth.getInstance().getCurrentUser().getPhotoUrl();
+
+        Log.d(TAG, xx.toString());
+
+
+//
+
         btn_sign_out = findViewById(R.id.sign_out_button);
         home = findViewById(R.id.btn_home);
         delete = findViewById(R.id.del);
