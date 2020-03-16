@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -60,6 +61,9 @@ public class login extends AppCompatActivity {
 
         Uri xx = FirebaseAuth.getInstance().getCurrentUser().getPhotoUrl();
 
+        ImageView imgView = (ImageView) findViewById(R.id.profile_pic);
+
+        imgView.setImageURI(Uri.parse(String.valueOf(xx)));
         Log.d(TAG, xx.toString());
 
 
