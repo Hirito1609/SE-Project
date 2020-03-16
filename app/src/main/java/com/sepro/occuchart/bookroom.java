@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -20,6 +21,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import org.w3c.dom.Document;
@@ -45,7 +47,7 @@ public class bookroom extends AppCompatActivity {
     Button reserve;
 
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private static final String TAG = "Database";
+    private static final String TAG = "Databasequery";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,12 +59,33 @@ public class bookroom extends AppCompatActivity {
         ArrayAdapter<String> ad = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,days);
         select_day.setAdapter(ad);
 
+        select_room.setVisibility(View.INVISIBLE);
         String periods[] = {"1","2","3","4","5","6","7","8"};
         ArrayAdapter<String> add = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,periods);
         select_period.setAdapter(add);
 
+        String rooms[]={};
 
         Query q = db.collection("rooms").whereEqualTo("AVAILABLE",true);
+        q.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful())
+                {
+                    QuerySnapshot doc = task.getResult();
+                    if(!doc.isEmpty())
+                    {
+//                        Log.d(TAG,doc.getDocuments().get(1));
+//                        Task<DocumentSnapshot> taskk =;
+//                        doc.getDocuments().get(1)=taskk.getResult();
+                    }
+                    else
+                    {
+                        Log.d(TAG, "No rooms available");
+                    }
+                }
+            }
+        });
 //        q.addValueEventListener(new ValueEventListener() {
 //            @Override
 //            public void onDataChange(DataSnapshot dataSnapshot) {
