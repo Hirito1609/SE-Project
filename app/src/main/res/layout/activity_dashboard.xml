@@ -85,7 +85,7 @@
                         <ImageView
                             android:id="@+id/Upload_button"
                             android:layout_gravity="center"
-                            android:src="@drawable/bitcoin"
+                            android:src="@drawable/upload"
                             android:layout_width="80dp"
                             android:layout_height="80dp" />
 
@@ -122,7 +122,7 @@
                         <ImageView
                             android:id="@+id/Veiw_button"
                             android:layout_gravity="center"
-                            android:src="@drawable/bitcoin"
+                            android:src="@drawable/veiw"
                             android:layout_width="80dp"
                             android:layout_height="80dp" />
 
@@ -159,7 +159,7 @@
                         <ImageView
                             android:id="@+id/Book_room_button"
                             android:layout_gravity="center"
-                            android:src="@drawable/bitcoin"
+                            android:src="@drawable/reserve"
                             android:layout_width="80dp"
                             android:layout_height="80dp" />
 
@@ -196,7 +196,7 @@
                         <ImageView
                             android:id="@+id/Status"
                             android:layout_gravity="center"
-                            android:src="@drawable/bitcoin"
+                            android:src="@drawable/status"
                             android:layout_width="80dp"
                             android:layout_height="80dp" />
 
@@ -232,7 +232,7 @@
 
                         <ImageView
                             android:layout_gravity="center"
-                            android:src="@drawable/bitcoin"
+                            android:src="@drawable/add"
                             android:layout_width="80dp"
                             android:layout_height="80dp" />
 
@@ -268,7 +268,7 @@
 
                         <ImageView
                             android:layout_gravity="center"
-                            android:src="@drawable/bitcoin"
+                            android:src="@drawable/allocate"
                             android:layout_width="80dp"
                             android:layout_height="80dp" />
 

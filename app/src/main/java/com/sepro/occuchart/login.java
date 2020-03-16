@@ -40,8 +40,9 @@ public class login extends AppCompatActivity {
         display_name = findViewById(R.id.disname);
         display_email = findViewById(R.id.disemail);
         display_phone = findViewById(R.id.disphone);
-        String usn= user.getDisplayName();
         String usemail = user.getEmail();
+
+        String usn= user.getDisplayName();
         if (usn != null)
         {
             display_name.append(user.getDisplayName());
