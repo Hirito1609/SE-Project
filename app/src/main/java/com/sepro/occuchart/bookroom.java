@@ -58,7 +58,7 @@ public class bookroom extends AppCompatActivity {
         select_day.setAdapter(ad);
 
         String periods[] = {"1","2","3","4","5","6","7","8"};
-        ArrayAdapter<String> add = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,days);
+        ArrayAdapter<String> add = new ArrayAdapter<>(this,android.R.layout.simple_spinner_dropdown_item,periods);
         select_period.setAdapter(add);
 
 
