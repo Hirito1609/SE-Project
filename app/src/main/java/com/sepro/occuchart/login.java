@@ -59,12 +59,12 @@ public class login extends AppCompatActivity {
         }
 //        getting user photo
 
-        Uri xx = FirebaseAuth.getInstance().getCurrentUser().getPhotoUrl();
-
-        ImageView imgView = (ImageView) findViewById(R.id.profile_pic);
-
-        imgView.setImageURI(Uri.parse(String.valueOf(xx)));
-        Log.d(TAG, xx.toString());
+//        Uri xx = FirebaseAuth.getInstance().getCurrentUser().getPhotoUrl();
+//
+//        ImageView imgView = (ImageView) findViewById(R.id.profile_pic);
+//
+//        imgView.setImageURI(Uri.parse(String.valueOf(xx)));
+//        Log.d(TAG, xx.toString());
 
 
 //
